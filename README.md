@@ -26,8 +26,7 @@ O usuário poderá se cadastrar, fornecendo um **nome de usuário** e uma **senh
 
 Se aquele nome de usuário já estiver sido cadastrado por outrém, um erro com o **status 400(Bad Request)** será retornado.
 
-![image](https://user-images.githubusercontent.com/40267373/121582193-1b80b880-ca05-11eb-885d-7f644ba786da.png)
-
+![Screenshot from 2022-02-27 19-36-09](https://user-images.githubusercontent.com/53349364/155903014-a7229ea6-7835-46b7-955d-1d0e3472e3cc.png)
 *Exemplo da requisição via Postman*
 
 ### Realizar login
@@ -43,7 +42,7 @@ O endpoint de login recebe os mesmo parâmetros de entrada que o de cadastro, ou
 
 Cumprido um dos passos acima, o usuário poderá utilizar o token, definindo-o no **cabeçalho de autorização** das requisições que o exigirem.
 
-![Screenshot from 2022-02-27 19-36-09](https://user-images.githubusercontent.com/53349364/155903014-a7229ea6-7835-46b7-955d-1d0e3472e3cc.png)
+![Screenshot from 2022-02-27 19-47-15](https://user-images.githubusercontent.com/53349364/155903194-16e881db-1b5b-45aa-9e7f-5051d30c39c0.png)
 
 *Definindo o token no cabeçalho da requisição no Postman*
 
@@ -54,7 +53,7 @@ Cumprido um dos passos acima, o usuário poderá utilizar o token, definindo-o n
 
 O usuário poderá obter todas as frases a partir de determinada **tag** ou categoria, disponível no site.
 
-![image](https://user-images.githubusercontent.com/40267373/121584608-09544980-ca08-11eb-9ad8-cbdb4b25ac83.png)
+![Screenshot from 2022-02-27 19-50-24](https://user-images.githubusercontent.com/53349364/155903269-65b46295-1e3a-4020-aa64-05fc7600b91a.png)
 
 *Exemplo de consulta de frases por tag*
 
