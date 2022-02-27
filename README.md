@@ -7,14 +7,12 @@ Crawler que busca frases no website <a href="http://quotes.toscrape.com/">Quotes
 Este projeto foi desenvolvido usando as seguintes tecnologias com as seguintes versões:
 
 - Ruby 2.7.0p0
-- Rails 5.2.6
-- MongoDB 3.6.8
+- Rails 6.0.4.6
+- Mongoid 7.0.5
+- Redis
+- Sidekiq
 
 As gems e suas respectivas versões podem ser visualizadas no Gemfile.lock
-
-Todas as requisições descritas nesse manual foram feitas usando o Postman. Elas estão desponíveis no <a href="https://github.com/RamonGiovane/quotes_crawler/blob/main/postman_collection.json">arquivo de importação
-aqui</a> (use "Salvar link como...". Também presente ao fazer clone do repositório).
-
 
 ## 2. Autenticação
 Para usar os serviços do crawler é preciso primeiro receber um token de autenticação JWT. Para isso, pode-se:
@@ -76,10 +74,7 @@ busque diretamente do site, ignorando o cache, ou seja, obrigando o crawler a re
 **Observação:** Isso não faz com que as frases em cache sejam apagadas, apenas força que seja realizada uma nova busca. Se o site por exemplo remover 
 uma frase, o cache ainda conterá ela.
 
-![image](https://user-images.githubusercontent.com/40267373/121594084-fc892300-ca12-11eb-8918-59b14f1d1b30.png)
-
 *Limpando uma tag no Postman*
-
 ## Limpar frases de uma tag
 **Endpoint: POST /quotes/*[tag]*/clean**
 
@@ -91,9 +86,8 @@ Se o cache for limpo passando apenas a tag 'inspirational', todas as frases cont
 
 ## Limpar todo o cache
 **Endpoint: POST /quotes/clean**
-
 Limpa todas as frases de todas as tags e as reseta.
-
-![image](https://user-images.githubusercontent.com/40267373/121599697-d0bd6b80-ca19-11eb-9636-801975487d30.png)
-
 *Limpando todo o cache usando Postman*
+
+**Redis/Sidekiq**
+Instalado e configurado serviço em background, caso queira implementar no futuro.
