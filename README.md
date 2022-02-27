@@ -62,32 +62,5 @@ Serão retornadas do crawler todas as frases que possuam a tag escolhida em sua 
 - Se a **tag** já houver sido buscada pelo menos uma vez no período de uma semana, serão retornadas as frases guardadas em **cache**, levando em torno de 20 milissegundos. 
 - Uma frase de um autor será guardada em cache apenas uma vez, buscas no site que passarem pela mesma frase não a armazenarão novamente.
 
-## 4. Limpando o cache
-O cache para determinada tag é válido por uma semana. Se isso não for interessante para o usuário, o mesmo poderá usar as seguintes operações:
-
-### Invalidando o cache de uma tag/Resetar uma tag
-**Endpoint:POST /quotes/*[tag]*/reset**
-
-Resetar uma tag fará com que ela seja excluída da lista de tags pesquisadas no cache, assim fazendo com que a próxima requisição por ela na API
-busque diretamente do site, ignorando o cache, ou seja, obrigando o crawler a rescanear o site na próxima consulta. 
-
-**Observação:** Isso não faz com que as frases em cache sejam apagadas, apenas força que seja realizada uma nova busca. Se o site por exemplo remover 
-uma frase, o cache ainda conterá ela.
-
-*Limpando uma tag no Postman*
-## Limpar frases de uma tag
-**Endpoint: POST /quotes/*[tag]*/clean**
-
-Exclui todas as frases de uma tag do cache e a reseta (veja o item anterior). 
-
-**Observação:** Essa opção pode não ser tão interessante porque há frases com multiplas tags. Por exemplo, suponha as tag 'love' e 'inspirational'.
-Se o cache for limpo passando apenas a tag 'inspirational', todas as frases contendo 'love' e 'inspirational' serão apagadas. Então posteriores consultas com
-'love' vindas do cache serão incompletas.
-
-## Limpar todo o cache
-**Endpoint: POST /quotes/clean**
-Limpa todas as frases de todas as tags e as reseta.
-*Limpando todo o cache usando Postman*
-
 **Redis/Sidekiq**
 Instalado e configurado serviço em background, caso queira implementar no futuro.
