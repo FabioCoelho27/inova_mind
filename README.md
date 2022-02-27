@@ -43,7 +43,7 @@ O endpoint de login recebe os mesmo parâmetros de entrada que o de cadastro, ou
 
 Cumprido um dos passos acima, o usuário poderá utilizar o token, definindo-o no **cabeçalho de autorização** das requisições que o exigirem.
 
-![image](https://user-images.githubusercontent.com/40267373/121583643-e6756580-ca06-11eb-9637-78f5338f09da.png)
+![Screenshot from 2022-02-27 19-36-09](https://user-images.githubusercontent.com/53349364/155903014-a7229ea6-7835-46b7-955d-1d0e3472e3cc.png)
 
 *Definindo o token no cabeçalho da requisição no Postman*
 
