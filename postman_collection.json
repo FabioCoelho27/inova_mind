@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "eb112715-a527-4573-911c-b6413539586d",
+		"name": "Teste Inovamind",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"ramon5\", \"password\": \"ramon5\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"ramon\", \"password\": \"ramon\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request quotes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/quotes/inspirational",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quotes",
+						"inspirational"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset tag",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjMzNTQ4MjcsImlhdCI6MTYyMzM1NDIyNywiaXNzIjoiSW5vdmEgTWluZCIsInVzZXIiOnsidXNlcm5hbWUiOiJyYW1vbiJ9fQ.S3V19Jkdogzp1btSytLBAUHXsaJDBS8yVPcJOz-mvE8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/quotes/humor/reset",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quotes",
+						"humor",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clean quote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjMzNTczNzksImlhdCI6MTYyMzM1Njc3OSwiaXNzIjoiSW5vdmFtaW5kIiwidXNlciI6eyJ1c2VybmFtZSI6InJhbW9uIn19.fkOBazjo9OS8N4dFri_wGYfPVuFdYxI8UzT-E1O8Af4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/quotes/inspirational/clean",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quotes",
+						"inspirational",
+						"clean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clean ALL quotes and tags",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjMzNTczNzksImlhdCI6MTYyMzM1Njc3OSwiaXNzIjoiSW5vdmFtaW5kIiwidXNlciI6eyJ1c2VybmFtZSI6InJhbW9uIn19.fkOBazjo9OS8N4dFri_wGYfPVuFdYxI8UzT-E1O8Af4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/quotes/clean",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quotes",
+						"clean"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
