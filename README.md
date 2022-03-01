@@ -14,7 +14,10 @@ Este projeto foi desenvolvido usando as seguintes tecnologias com as seguintes v
 
 As gems e suas respectivas versões podem ser visualizadas no Gemfile.lock
 
-## 2. Autenticação
+## 2. Startar o mongo db
+Antes de fazer qualquer busca é preciso startar o mongo db com o seguinte comando:
+**sudo service mongod start**
+## 3. Autenticação
 Para usar os serviços do crawler é preciso primeiro receber um token de autenticação JWT. Para isso, pode-se:
 
 ### Cadastrar um usuário
